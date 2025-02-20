@@ -46,6 +46,7 @@ namespace SharpChess.Model
     /// </summary>
     public static class Game
     {
+
         #region Constants and Fields
 
         /// <summary>
@@ -69,6 +70,7 @@ namespace SharpChess.Model
             ClockTime = new TimeSpan(0, 5, 0);
             ClockMaxMoves = 40;
             UseRandomOpeningMoves = true;
+            IsChess960 = true;
             MoveRedoList = new Moves();
             MaximumSearchDepth = 1;
             MoveAnalysis = new Moves();
@@ -925,6 +927,11 @@ namespace SharpChess.Model
                 UseRandomOpeningMoves = xmlnodeGame.GetAttribute("UseRandomOpeningMoves") == "1";
             }
 
+            if (xmlnodeGame.GetAttribute("IsChess960") != string.Empty)
+            {
+                IsChess960 = xmlnodeGame.GetAttribute("IsChess960") == "1";
+            }
+
             XmlNodeList xmlnodelist = xmldoc.SelectNodes("/Game/Move");
 
             if (xmlnodelist != null)
@@ -1156,6 +1163,7 @@ namespace SharpChess.Model
             xmlnodeGame.SetAttribute("MaximumSearchDepth", MaximumSearchDepth.ToString(CultureInfo.InvariantCulture));
             xmlnodeGame.SetAttribute("Pondering", EnablePondering ? "1" : "0");
             xmlnodeGame.SetAttribute("UseRandomOpeningMoves", UseRandomOpeningMoves ? "1" : "0");
+            xmlnodeGame.SetAttribute("IsChess960", IsChess960 ? "1" : "0");
 
             foreach (Move move in MoveHistory)
             {
@@ -1220,5 +1228,7 @@ namespace SharpChess.Model
         }
 
         #endregion
+
+        public static bool IsChess960 { get; set; }
     }
 }

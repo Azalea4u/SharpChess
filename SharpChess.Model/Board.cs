@@ -29,6 +29,8 @@ namespace SharpChess.Model
     #region Using
 
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     #endregion
 

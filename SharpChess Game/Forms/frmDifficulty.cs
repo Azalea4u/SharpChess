@@ -163,6 +163,7 @@ namespace SharpChess
         /// The rad level.
         /// </summary>
         private RadioButton radLevel;
+        private CheckBox CB_Chess960;
 
         /// <summary>
         /// The trk level.
@@ -237,7 +238,7 @@ namespace SharpChess
         /// </summary>
         private void InitializeComponent()
         {
-            System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(frmDifficulty));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDifficulty));
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.chkEnablePondering = new System.Windows.Forms.CheckBox();
@@ -261,6 +262,7 @@ namespace SharpChess
             this.numMaximumSearchDepth = new System.Windows.Forms.NumericUpDown();
             this.chkRestrictSearchDepth = new System.Windows.Forms.CheckBox();
             this.radCustom = new System.Windows.Forms.RadioButton();
+            this.CB_Chess960 = new System.Windows.Forms.CheckBox();
             this.grpClock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMoves)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinutes)).BeginInit();
@@ -272,8 +274,9 @@ namespace SharpChess
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(288, 352);
+            this.btnOK.Location = new System.Drawing.Point(472, 602);
             this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(120, 34);
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -281,17 +284,18 @@ namespace SharpChess
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(368, 352);
+            this.btnCancel.Location = new System.Drawing.Point(600, 602);
             this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(120, 34);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // chkEnablePondering
             // 
-            this.chkEnablePondering.Location = new System.Drawing.Point(16, 160);
+            this.chkEnablePondering.Location = new System.Drawing.Point(26, 234);
             this.chkEnablePondering.Name = "chkEnablePondering";
-            this.chkEnablePondering.Size = new System.Drawing.Size(296, 16);
+            this.chkEnablePondering.Size = new System.Drawing.Size(473, 23);
             this.chkEnablePondering.TabIndex = 4;
             this.chkEnablePondering.Text = "&Enable Pondering (Thinking during other player\'s turn)";
             // 
@@ -306,9 +310,9 @@ namespace SharpChess
             this.grpClock.Controls.Add(this.label1);
             this.grpClock.Controls.Add(this.lblClockMinutes);
             this.grpClock.Controls.Add(this.lblClockMovesIn);
-            this.grpClock.Location = new System.Drawing.Point(16, 32);
+            this.grpClock.Location = new System.Drawing.Point(26, 47);
             this.grpClock.Name = "grpClock";
-            this.grpClock.Size = new System.Drawing.Size(392, 80);
+            this.grpClock.Size = new System.Drawing.Size(627, 117);
             this.grpClock.TabIndex = 4;
             this.grpClock.TabStop = false;
             this.grpClock.Text = "Thinking Time";
@@ -316,98 +320,98 @@ namespace SharpChess
             // lblMaximumSeconds
             // 
             this.lblMaximumSeconds.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMaximumSeconds.Location = new System.Drawing.Point(216, 48);
+            this.lblMaximumSeconds.Location = new System.Drawing.Point(346, 70);
             this.lblMaximumSeconds.Name = "lblMaximumSeconds";
-            this.lblMaximumSeconds.Size = new System.Drawing.Size(32, 20);
+            this.lblMaximumSeconds.Size = new System.Drawing.Size(51, 29);
             this.lblMaximumSeconds.TabIndex = 16;
             this.lblMaximumSeconds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Location = new System.Drawing.Point(264, 48);
+            this.label4.Location = new System.Drawing.Point(422, 70);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 16);
+            this.label4.Size = new System.Drawing.Size(192, 24);
             this.label4.TabIndex = 15;
             this.label4.Text = "maximum secs / move";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numMoves
             // 
-            this.numMoves.Location = new System.Drawing.Point(8, 24);
-            this.numMoves.Maximum = new System.Decimal(new int[] {
-																	 999,
-																	 0,
-																	 0,
-																	 0});
-            this.numMoves.Minimum = new System.Decimal(new int[] {
-																	 1,
-																	 0,
-																	 0,
-																	 0});
+            this.numMoves.Location = new System.Drawing.Point(13, 35);
+            this.numMoves.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numMoves.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numMoves.Name = "numMoves";
-            this.numMoves.Size = new System.Drawing.Size(40, 20);
+            this.numMoves.Size = new System.Drawing.Size(64, 26);
             this.numMoves.TabIndex = 10;
             this.numMoves.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numMoves.Value = new System.Decimal(new int[] {
-																   1,
-																   0,
-																   0,
-																   0});
-            this.numMoves.KeyUp += new System.Windows.Forms.KeyEventHandler(this.numMoves_KeyUp);
+            this.numMoves.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numMoves.ValueChanged += new System.EventHandler(this.numMoves_ValueChanged);
+            this.numMoves.KeyUp += new System.Windows.Forms.KeyEventHandler(this.numMoves_KeyUp);
             // 
             // numMinutes
             // 
-            this.numMinutes.Location = new System.Drawing.Point(104, 24);
-            this.numMinutes.Maximum = new System.Decimal(new int[] {
-																	   999,
-																	   0,
-																	   0,
-																	   0});
-            this.numMinutes.Minimum = new System.Decimal(new int[] {
-																	   1,
-																	   0,
-																	   0,
-																	   0});
+            this.numMinutes.Location = new System.Drawing.Point(166, 35);
+            this.numMinutes.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numMinutes.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numMinutes.Name = "numMinutes";
-            this.numMinutes.Size = new System.Drawing.Size(40, 20);
+            this.numMinutes.Size = new System.Drawing.Size(64, 26);
             this.numMinutes.TabIndex = 14;
             this.numMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numMinutes.Value = new System.Decimal(new int[] {
-																	 1,
-																	 0,
-																	 0,
-																	 0});
-            this.numMinutes.KeyUp += new System.Windows.Forms.KeyEventHandler(this.numMinutes_KeyUp);
+            this.numMinutes.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numMinutes.ValueChanged += new System.EventHandler(this.numMinutes_ValueChanged);
+            this.numMinutes.KeyUp += new System.Windows.Forms.KeyEventHandler(this.numMinutes_KeyUp);
             // 
             // lblAverageSeconds
             // 
             this.lblAverageSeconds.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAverageSeconds.Location = new System.Drawing.Point(216, 24);
+            this.lblAverageSeconds.Location = new System.Drawing.Point(346, 35);
             this.lblAverageSeconds.Name = "lblAverageSeconds";
-            this.lblAverageSeconds.Size = new System.Drawing.Size(32, 20);
+            this.lblAverageSeconds.Size = new System.Drawing.Size(51, 29);
             this.lblAverageSeconds.TabIndex = 13;
             this.lblAverageSeconds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Location = new System.Drawing.Point(264, 24);
+            this.label2.Location = new System.Drawing.Point(422, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.Size = new System.Drawing.Size(180, 23);
             this.label2.TabIndex = 12;
             this.label2.Text = "average secs / move";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(192, 24);
+            this.label1.Location = new System.Drawing.Point(307, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(8, 16);
+            this.label1.Size = new System.Drawing.Size(13, 23);
             this.label1.TabIndex = 10;
             this.label1.Text = "=";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -415,9 +419,9 @@ namespace SharpChess
             // lblClockMinutes
             // 
             this.lblClockMinutes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblClockMinutes.Location = new System.Drawing.Point(144, 24);
+            this.lblClockMinutes.Location = new System.Drawing.Point(230, 35);
             this.lblClockMinutes.Name = "lblClockMinutes";
-            this.lblClockMinutes.Size = new System.Drawing.Size(48, 16);
+            this.lblClockMinutes.Size = new System.Drawing.Size(77, 23);
             this.lblClockMinutes.TabIndex = 9;
             this.lblClockMinutes.Text = "minutes";
             this.lblClockMinutes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -425,9 +429,9 @@ namespace SharpChess
             // lblClockMovesIn
             // 
             this.lblClockMovesIn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblClockMovesIn.Location = new System.Drawing.Point(40, 24);
+            this.lblClockMovesIn.Location = new System.Drawing.Point(64, 35);
             this.lblClockMovesIn.Name = "lblClockMovesIn";
-            this.lblClockMovesIn.Size = new System.Drawing.Size(64, 16);
+            this.lblClockMovesIn.Size = new System.Drawing.Size(102, 23);
             this.lblClockMovesIn.TabIndex = 7;
             this.lblClockMovesIn.Text = "moves in";
             this.lblClockMovesIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -435,31 +439,31 @@ namespace SharpChess
             // grpLevel
             // 
             this.grpLevel.Controls.Add(this.trkLevel);
-            this.grpLevel.Location = new System.Drawing.Point(16, 24);
+            this.grpLevel.Location = new System.Drawing.Point(26, 35);
             this.grpLevel.Name = "grpLevel";
-            this.grpLevel.Size = new System.Drawing.Size(424, 72);
+            this.grpLevel.Size = new System.Drawing.Size(678, 105);
             this.grpLevel.TabIndex = 6;
             this.grpLevel.TabStop = false;
             // 
             // trkLevel
             // 
             this.trkLevel.LargeChange = 1;
-            this.trkLevel.Location = new System.Drawing.Point(8, 24);
+            this.trkLevel.Location = new System.Drawing.Point(13, 35);
             this.trkLevel.Maximum = 16;
             this.trkLevel.Minimum = 1;
             this.trkLevel.Name = "trkLevel";
-            this.trkLevel.Size = new System.Drawing.Size(408, 45);
+            this.trkLevel.Size = new System.Drawing.Size(653, 69);
             this.trkLevel.TabIndex = 6;
             this.trkLevel.Value = 1;
             this.trkLevel.Scroll += new System.EventHandler(this.trkLevel_Scroll);
             // 
             // lblLevel
             // 
-            this.lblLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+            this.lblLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLevel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblLevel.Location = new System.Drawing.Point(160, 16);
+            this.lblLevel.Location = new System.Drawing.Point(256, 23);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(32, 24);
+            this.lblLevel.Size = new System.Drawing.Size(51, 35);
             this.lblLevel.TabIndex = 7;
             this.lblLevel.Text = "16";
             this.lblLevel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -467,9 +471,9 @@ namespace SharpChess
             // radLevel
             // 
             this.radLevel.Checked = true;
-            this.radLevel.Location = new System.Drawing.Point(24, 16);
+            this.radLevel.Location = new System.Drawing.Point(38, 23);
             this.radLevel.Name = "radLevel";
-            this.radLevel.Size = new System.Drawing.Size(144, 24);
+            this.radLevel.Size = new System.Drawing.Size(231, 35);
             this.radLevel.TabIndex = 15;
             this.radLevel.TabStop = true;
             this.radLevel.Text = "General Difficulty Level:";
@@ -477,6 +481,7 @@ namespace SharpChess
             // 
             // grpCustom
             // 
+            this.grpCustom.Controls.Add(this.CB_Chess960);
             this.grpCustom.Controls.Add(this.chkUseRandomOpeningMoves);
             this.grpCustom.Controls.Add(this.label5);
             this.grpCustom.Controls.Add(this.numMaximumSearchDepth);
@@ -484,75 +489,84 @@ namespace SharpChess
             this.grpCustom.Controls.Add(this.grpClock);
             this.grpCustom.Controls.Add(this.chkEnablePondering);
             this.grpCustom.Enabled = false;
-            this.grpCustom.Location = new System.Drawing.Point(16, 112);
+            this.grpCustom.Location = new System.Drawing.Point(26, 164);
             this.grpCustom.Name = "grpCustom";
-            this.grpCustom.Size = new System.Drawing.Size(424, 224);
+            this.grpCustom.Size = new System.Drawing.Size(678, 401);
             this.grpCustom.TabIndex = 16;
             this.grpCustom.TabStop = false;
             // 
             // chkUseRandomOpeningMoves
             // 
-            this.chkUseRandomOpeningMoves.Location = new System.Drawing.Point(16, 192);
+            this.chkUseRandomOpeningMoves.Location = new System.Drawing.Point(26, 281);
             this.chkUseRandomOpeningMoves.Name = "chkUseRandomOpeningMoves";
-            this.chkUseRandomOpeningMoves.Size = new System.Drawing.Size(352, 16);
+            this.chkUseRandomOpeningMoves.Size = new System.Drawing.Size(563, 23);
             this.chkUseRandomOpeningMoves.TabIndex = 12;
             this.chkUseRandomOpeningMoves.Text = "&Use Random Opening Moves (Opening Book)";
             // 
             // label5
             // 
             this.label5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label5.Location = new System.Drawing.Point(192, 128);
+            this.label5.Location = new System.Drawing.Point(307, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 16);
+            this.label5.Size = new System.Drawing.Size(51, 23);
             this.label5.TabIndex = 11;
             this.label5.Text = "ply(s)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numMaximumSearchDepth
             // 
-            this.numMaximumSearchDepth.Location = new System.Drawing.Point(152, 128);
-            this.numMaximumSearchDepth.Maximum = new System.Decimal(new int[] {
-																				  32,
-																				  0,
-																				  0,
-																				  0});
-            this.numMaximumSearchDepth.Minimum = new System.Decimal(new int[] {
-																				  1,
-																				  0,
-																				  0,
-																				  0});
+            this.numMaximumSearchDepth.Location = new System.Drawing.Point(243, 187);
+            this.numMaximumSearchDepth.Maximum = new decimal(new int[] {
+            32,
+            0,
+            0,
+            0});
+            this.numMaximumSearchDepth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numMaximumSearchDepth.Name = "numMaximumSearchDepth";
-            this.numMaximumSearchDepth.Size = new System.Drawing.Size(40, 20);
+            this.numMaximumSearchDepth.Size = new System.Drawing.Size(64, 26);
             this.numMaximumSearchDepth.TabIndex = 9;
             this.numMaximumSearchDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numMaximumSearchDepth.Value = new System.Decimal(new int[] {
-																				1,
-																				0,
-																				0,
-																				0});
+            this.numMaximumSearchDepth.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkRestrictSearchDepth
             // 
-            this.chkRestrictSearchDepth.Location = new System.Drawing.Point(16, 128);
+            this.chkRestrictSearchDepth.Location = new System.Drawing.Point(26, 187);
             this.chkRestrictSearchDepth.Name = "chkRestrictSearchDepth";
-            this.chkRestrictSearchDepth.Size = new System.Drawing.Size(144, 16);
+            this.chkRestrictSearchDepth.Size = new System.Drawing.Size(230, 23);
             this.chkRestrictSearchDepth.TabIndex = 10;
             this.chkRestrictSearchDepth.Text = "Restrict search depth to";
             this.chkRestrictSearchDepth.CheckedChanged += new System.EventHandler(this.chkRestrictSearchDepth_CheckedChanged);
             // 
             // radCustom
             // 
-            this.radCustom.Location = new System.Drawing.Point(24, 104);
+            this.radCustom.Location = new System.Drawing.Point(38, 152);
             this.radCustom.Name = "radCustom";
-            this.radCustom.Size = new System.Drawing.Size(64, 24);
+            this.radCustom.Size = new System.Drawing.Size(103, 35);
             this.radCustom.TabIndex = 17;
             this.radCustom.Text = "Custom";
             this.radCustom.CheckedChanged += new System.EventHandler(this.radCustom_CheckedChanged);
             // 
+            // CB_Chess960
+            // 
+            this.CB_Chess960.Location = new System.Drawing.Point(26, 327);
+            this.CB_Chess960.Name = "CB_Chess960";
+            this.CB_Chess960.Size = new System.Drawing.Size(563, 23);
+            this.CB_Chess960.TabIndex = 13;
+            this.CB_Chess960.Text = "&Chess960 Mode";
+            this.CB_Chess960.CheckedChanged += new System.EventHandler(this.cbo_Chess960_CheckedChanged);
+            // 
             // frmDifficulty
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(458, 384);
+            this.AutoScaleBaseSize = new System.Drawing.Size(8, 19);
+            this.ClientSize = new System.Drawing.Size(732, 659);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.radLevel);
             this.Controls.Add(this.radCustom);
@@ -573,10 +587,12 @@ namespace SharpChess
             ((System.ComponentModel.ISupportInitialize)(this.numMoves)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinutes)).EndInit();
             this.grpLevel.ResumeLayout(false);
+            this.grpLevel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkLevel)).EndInit();
             this.grpCustom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numMaximumSearchDepth)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         /// <summary>
@@ -763,6 +779,7 @@ namespace SharpChess
             Game.MaximumSearchDepth = this.chkRestrictSearchDepth.Checked ? (int)this.numMaximumSearchDepth.Value : 0;
             Game.EnablePondering = this.chkEnablePondering.Checked;
             Game.UseRandomOpeningMoves = this.chkUseRandomOpeningMoves.Checked;
+            Game.IsChess960 = this.CB_Chess960.Checked;
 
             this.m_blnConfirmed = true;
 
@@ -897,6 +914,12 @@ namespace SharpChess
             this.SetGeneralDifficulty();
         }
 
+        private void cbo_Chess960_CheckedChanged(object sender, EventArgs e)
+        {
+            this.SetFormState();
+            this.SetChess960Mode();
+        }
+
         /// <summary>
         /// The trk level_ scroll.
         /// </summary>
@@ -909,6 +932,11 @@ namespace SharpChess
         private void trkLevel_Scroll(object sender, EventArgs e)
         {
             this.SetGeneralDifficulty();
+        }
+
+        private void SetChess960Mode()
+        {
+            // set pieces
         }
 
         #endregion
