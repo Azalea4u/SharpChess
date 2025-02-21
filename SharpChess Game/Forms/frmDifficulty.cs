@@ -29,6 +29,7 @@ namespace SharpChess
 
     using System;
     using System.ComponentModel;
+    using System.Diagnostics;
     using System.Drawing;
     using System.Resources;
     using System.Windows.Forms;
@@ -163,6 +164,10 @@ namespace SharpChess
         /// The rad level.
         /// </summary>
         private RadioButton radLevel;
+
+        /// <summary>
+        /// The Chess960 checkbox
+        /// </summary>
         private CheckBox CB_Chess960;
 
         /// <summary>
@@ -745,6 +750,15 @@ namespace SharpChess
             }
         }
 
+        private void SetChess960Mode()
+        {
+            Game.IsChess960 = this.CB_Chess960.Checked;
+
+            // If Chess960 is toggled, immediately update the board
+            Game.SetStartingPositions();
+        }
+
+
         /// <summary>
         /// The btn cancel_ click.
         /// </summary>
@@ -780,6 +794,13 @@ namespace SharpChess
             Game.EnablePondering = this.chkEnablePondering.Checked;
             Game.UseRandomOpeningMoves = this.chkUseRandomOpeningMoves.Checked;
             Game.IsChess960 = this.CB_Chess960.Checked;
+
+            if (Game.IsChess960 == true)
+            {
+                Game.SetStartingPositions();
+            }
+
+            Debug.WriteLine("Setting positions");
 
             this.m_blnConfirmed = true;
 
@@ -826,6 +847,7 @@ namespace SharpChess
             this.numMaximumSearchDepth.Value = Math.Max(Game.MaximumSearchDepth, 1);
             this.chkEnablePondering.Checked = Game.EnablePondering;
             this.chkUseRandomOpeningMoves.Checked = Game.UseRandomOpeningMoves;
+            this.CB_Chess960.Checked = Game.IsChess960;
             this.SetFormState();
         }
 
@@ -932,11 +954,6 @@ namespace SharpChess
         private void trkLevel_Scroll(object sender, EventArgs e)
         {
             this.SetGeneralDifficulty();
-        }
-
-        private void SetChess960Mode()
-        {
-            // set pieces
         }
 
         #endregion

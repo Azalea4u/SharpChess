@@ -31,6 +31,7 @@ namespace SharpChess.Model
     #region Using
 
     using System;
+    using System.Collections.Generic;
     using System.Globalization;
     using System.Reflection;
     using System.Xml;
@@ -136,6 +137,8 @@ namespace SharpChess.Model
                     }
                 }
             }
+
+            SetStartingPositions();
 
             // OpeningBook.BookConvert(Game.PlayerWhite);
         }
@@ -474,6 +477,11 @@ namespace SharpChess.Model
         ///   Gets or sets a value indicating whether to use random opening moves.
         /// </summary>
         public static bool UseRandomOpeningMoves { get; set; }
+
+        /// <summary>
+        ///   Gets or sets a value indicating whether to use chess960 mode
+        /// </summary>
+        public static bool IsChess960 { get; set; }
 
         #endregion
 
@@ -1058,8 +1066,10 @@ namespace SharpChess.Model
         ///   Start a new game from the specified FEN string position. For internal use only.
         /// </summary>
         /// <param name="fenString"> The str fen. </param>
-        private static void NewInternal(string fenString)
+        private static void NewInternal(string fenString = "")
         {
+            bool previousChess960Setting = IsChess960; // Preserve the current setting
+
             if (fenString == string.Empty)
             {
                 fenString = Fen.GameStartPosition;
@@ -1076,10 +1086,14 @@ namespace SharpChess.Model
             UndoAllMovesInternal();
             MoveRedoList.Clear();
             saveGameFileName = string.Empty;
-            Fen.SetBoardPosition(fenString);
+
+            IsChess960 = previousChess960Setting; // Restore Chess960 mode
+            SetStartingPositions(); // Set board based on the restored setting
+
             PlayerWhite.Clock.Reset();
             PlayerBlack.Clock.Reset();
         }
+
 
         /// <summary>
         ///   Called when the computer has finished thinking, and is ready to make its move.
@@ -1229,6 +1243,64 @@ namespace SharpChess.Model
 
         #endregion
 
-        public static bool IsChess960 { get; set; }
+        /// <summary>
+        ///   Sets the position of the starting Chess Pieces
+        /// </summary>
+        public static void SetStartingPositions()
+        {
+            if (IsChess960)
+            {
+                int[] backRankWhite = GenerateChess960BackRank();
+                int[] backRankBlack = (int[])backRankWhite.Clone(); // Mirror for black
+
+                PlayerWhite.SetChess960Positions(backRankWhite);
+                PlayerBlack.SetChess960Positions(backRankBlack);
+            }
+            else
+            {
+                PlayerWhite.SetPiecesAtStartingPositions();
+                PlayerBlack.SetPiecesAtStartingPositions();
+            }
+        }
+
+        /// <summary>
+        ///   Sets the back pieces when in chess960 mode
+        /// </summary>
+        public static int[] GenerateChess960BackRank()
+        {
+            List<int> positions = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7 };
+            int[] backRank = new int[8];
+
+            // Place the king between the rooks
+            int kingPos = positions[new Random().Next(1, 7)];
+            backRank[kingPos] = (int)Piece.PieceNames.King;
+            positions.Remove(kingPos);
+
+            int rook1Pos = positions[0];
+            int rook2Pos = positions[positions.Count - 1];
+            backRank[rook1Pos] = (int)Piece.PieceNames.Rook;
+            backRank[rook2Pos] = (int)Piece.PieceNames.Rook;
+            positions.Remove(rook1Pos);
+            positions.Remove(rook2Pos);
+
+            // Place bishops on opposite colors
+            int bishop1Pos = positions.Find(pos => pos % 2 == 0);
+            int bishop2Pos = positions.Find(pos => pos % 2 == 1);
+            backRank[bishop1Pos] = (int)Piece.PieceNames.Bishop;
+            backRank[bishop2Pos] = (int)Piece.PieceNames.Bishop;
+            positions.Remove(bishop1Pos);
+            positions.Remove(bishop2Pos);
+
+            // Place the queen
+            int queenPos = positions[new Random().Next(positions.Count)];
+            backRank[queenPos] = (int)Piece.PieceNames.Queen;
+            positions.Remove(queenPos);
+
+            // The last two slots are knights
+            backRank[positions[0]] = (int)Piece.PieceNames.Knight;
+            backRank[positions[1]] = (int)Piece.PieceNames.Knight;
+
+            return backRank;
+        }
     }
 }

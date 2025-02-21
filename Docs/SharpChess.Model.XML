@@ -2099,6 +2099,11 @@
               Gets or sets a value indicating whether to use random opening moves.
             </summary>
         </member>
+        <member name="P:SharpChess.Model.Game.IsChess960">
+            <summary>
+              Gets or sets a value indicating whether to use chess960 mode
+            </summary>
+        </member>
         <member name="M:SharpChess.Model.Game.CaptureAllPieces">
             <summary>
               Captures all pieces.
@@ -2291,6 +2296,16 @@
         <member name="M:SharpChess.Model.Game.UndoMoveInternal">
             <summary>
               Undo move. For internal use only.
+            </summary>
+        </member>
+        <member name="M:SharpChess.Model.Game.SetStartingPositions">
+            <summary>
+              Sets the position of the starting Chess Pieces
+            </summary>
+        </member>
+        <member name="M:SharpChess.Model.Game.GenerateChess960BackRank">
+            <summary>
+              Sets the back pieces when in chess960 mode
             </summary>
         </member>
         <member name="T:SharpChess.Model.IPieceTop">
@@ -4274,7 +4289,7 @@
             Gets PawnForwardOffset.
             </summary>
         </member>
-        <member name="M:SharpChess.Model.PlayerBlack.SetPiecesAtStartingPositions">
+        <member name="M:SharpChess.Model.PlayerBlack.SetStandardPositions">
             <summary>
             The set pieces at starting positions.
             </summary>
@@ -4435,6 +4450,7 @@
             <summary>
             The set pieces at starting positions.
             </summary>
+            
         </member>
         <member name="T:SharpChess.Model.Square">
             <summary>

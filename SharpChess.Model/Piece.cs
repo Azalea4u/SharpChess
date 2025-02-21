@@ -314,7 +314,6 @@ namespace SharpChess.Model
         }
 
         #endregion
-       
 
         #region Public Properties
 
@@ -603,8 +602,6 @@ namespace SharpChess.Model
             }
             return false;
         }
-
-
 
         public bool CanAttackSquare(Square square)
         {

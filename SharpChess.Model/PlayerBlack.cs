@@ -23,6 +23,8 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endregion
 
+using System;
+
 namespace SharpChess.Model
 {
     /// <summary>
@@ -84,10 +86,65 @@ namespace SharpChess.Model
 
         #region Methods
 
+        public override void SetPiecesAtStartingPositions()
+        {
+            this.Pieces.Add(this.King = new Piece(Piece.PieceNames.King, this, 4, 7, Piece.PieceIdentifierCodes.BlackKing));
+            this.Pieces.Add(new Piece(Piece.PieceNames.Queen, this, 3, 7, Piece.PieceIdentifierCodes.BlackQueen));
+            this.Pieces.Add(new Piece(Piece.PieceNames.Rook, this, 0, 7, Piece.PieceIdentifierCodes.BlackQueensRook));
+            this.Pieces.Add(new Piece(Piece.PieceNames.Rook, this, 7, 7, Piece.PieceIdentifierCodes.BlackKingsRook));
+            this.Pieces.Add(new Piece(Piece.PieceNames.Bishop, this, 2, 7, Piece.PieceIdentifierCodes.BlackQueensBishop));
+            this.Pieces.Add(new Piece(Piece.PieceNames.Bishop, this, 5, 7, Piece.PieceIdentifierCodes.BlackKingsBishop));
+            this.Pieces.Add(new Piece(Piece.PieceNames.Knight, this, 1, 7, Piece.PieceIdentifierCodes.BlackQueensKnight));
+            this.Pieces.Add(new Piece(Piece.PieceNames.Knight, this, 6, 7, Piece.PieceIdentifierCodes.BlackKingsKnight));
+
+            for (int i = 0; i < 8; i++)
+            {
+                this.Pieces.Add(new Piece(Piece.PieceNames.Pawn, this, i, 6, Piece.PieceIdentifierCodes.BlackPawn1 + i));
+            }
+        }
+
+        public void SetChess960Positions(int[] backRank)
+        {
+            this.PieceTypes().Clear();
+
+            // Place back-rank pieces
+            for (int i = 0; i < 8; i++)
+            {
+                Piece.PieceNames pieceType = (Piece.PieceNames)backRank[i];
+                this.Pieces.Add(new Piece(pieceType, this, i, 7, GetBlackPieceIdentifier(pieceType, i)));
+            }
+
+            // Place pawns
+            for (int i = 0; i < 8; i++)
+            {
+                this.Pieces.Add(new Piece(Piece.PieceNames.Pawn, this, i, 6, Piece.PieceIdentifierCodes.BlackPawn1 + i));
+            }
+        }
+
+        private Piece.PieceIdentifierCodes GetBlackPieceIdentifier(Piece.PieceNames piece, int file)
+        {
+            switch (piece)
+            {
+                case Piece.PieceNames.King:
+                    return Piece.PieceIdentifierCodes.BlackKing;
+                case Piece.PieceNames.Queen:
+                    return Piece.PieceIdentifierCodes.BlackQueen;
+                case Piece.PieceNames.Rook:
+                    return file == 0 ? Piece.PieceIdentifierCodes.WhiteQueensRook : Piece.PieceIdentifierCodes.BlackKingsRook;
+                case Piece.PieceNames.Bishop:
+                    return file % 2 == 0 ? Piece.PieceIdentifierCodes.BlackQueensBishop : Piece.PieceIdentifierCodes.BlackKingsBishop;
+                case Piece.PieceNames.Knight:
+                    return file % 2 == 1 ? Piece.PieceIdentifierCodes.BlackQueensKnight : Piece.PieceIdentifierCodes.BlackKingsKnight;
+                default:
+                    throw new ArgumentException("Invalid piece type");
+            }
+        }
+
+
         /// <summary>
         /// The set pieces at starting positions.
         /// </summary>
-        protected override sealed void SetPiecesAtStartingPositions()
+        private void SetStandardPositions()
         {
             this.Pieces.Add(this.King = new Piece(Piece.PieceNames.King, this, 4, 7, Piece.PieceIdentifierCodes.BlackKing));
 

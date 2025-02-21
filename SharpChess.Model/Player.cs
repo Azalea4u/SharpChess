@@ -28,6 +28,7 @@ namespace SharpChess.Model
     #region Using
 
     using SharpChess.Model.AI;
+    using System;
     using System.Collections.Generic;
 
     #endregion
@@ -119,7 +120,6 @@ namespace SharpChess.Model
 
 
         private List<Piece.PieceNames> _PieceTypes;
-
 
         #region Public Properties
 
@@ -877,12 +877,77 @@ namespace SharpChess.Model
                 return new Move(0, 0, MoveName, piece, from, to, pieceTaken, 0, 0);
         }
 */
+
         #region Methods
 
         /// <summary>
         /// The set pieces at starting positions.
         /// </summary>
-        protected abstract void SetPiecesAtStartingPositions();
+            public virtual void SetPiecesAtStartingPositions()
+            {
+                // This method must be overridden in derived classes
+                throw new NotImplementedException("SetPiecesAtStartingPositions must be implemented in PlayerWhite and PlayerBlack.");
+            }
+
+            public virtual void SetChess960Positions(int[] backRank)
+            {
+                // Remove all existing pieces
+                while (this.Pieces.Count > 0)
+                {
+                    this.Pieces.Remove(this.Pieces.Item(0));
+                }
+
+                int pawnRank = 0;
+
+                // Place back-rank pieces
+                for (int i = 0; i < 8; i++)
+                {
+                    Piece.PieceNames pieceType = (Piece.PieceNames)backRank[i];
+                    Piece.PieceIdentifierCodes identifier = GetPieceIdentifier(pieceType, i);
+
+                    int rank = this.Colour == PlayerColourNames.White ? 0 : 7;
+                    pawnRank = this.Colour == PlayerColourNames.White ? 1 : 6;
+
+                    this.Pieces.Add(new Piece(pieceType, this, i, rank, identifier));
+                }
+
+                // Place pawns
+                for (int i = 0; i < 8; i++)
+                {
+                    this.Pieces.Add(new Piece(Piece.PieceNames.Pawn, this, i, pawnRank,
+                        this.Colour == PlayerColourNames.White ?
+                        Piece.PieceIdentifierCodes.WhitePawn1 + i :
+                        Piece.PieceIdentifierCodes.BlackPawn1 + i));
+                }
+            }
+
+            private Piece.PieceIdentifierCodes GetPieceIdentifier(Piece.PieceNames piece, int file)
+            {
+                bool isWhite = this.Colour == PlayerColourNames.White;
+
+                switch (piece)
+                {
+                    case Piece.PieceNames.King:
+                        return isWhite ? Piece.PieceIdentifierCodes.WhiteKing : Piece.PieceIdentifierCodes.BlackKing;
+                    case Piece.PieceNames.Queen:
+                        return isWhite ? Piece.PieceIdentifierCodes.WhiteQueen : Piece.PieceIdentifierCodes.BlackQueen;
+                    case Piece.PieceNames.Rook:
+                        return file == 0 ?
+                            (isWhite ? Piece.PieceIdentifierCodes.WhiteQueensRook : Piece.PieceIdentifierCodes.BlackQueensRook) :
+                            (isWhite ? Piece.PieceIdentifierCodes.WhiteKingsRook : Piece.PieceIdentifierCodes.BlackKingsRook);
+                    case Piece.PieceNames.Bishop:
+                        return file % 2 == 0 ?
+                            (isWhite ? Piece.PieceIdentifierCodes.WhiteQueensBishop : Piece.PieceIdentifierCodes.BlackQueensBishop) :
+                            (isWhite ? Piece.PieceIdentifierCodes.WhiteKingsBishop : Piece.PieceIdentifierCodes.BlackKingsBishop);
+                    case Piece.PieceNames.Knight:
+                        return file % 2 == 1 ?
+                            (isWhite ? Piece.PieceIdentifierCodes.WhiteQueensKnight : Piece.PieceIdentifierCodes.BlackQueensKnight) :
+                            (isWhite ? Piece.PieceIdentifierCodes.WhiteKingsKnight : Piece.PieceIdentifierCodes.BlackKingsKnight);
+                    default:
+                        throw new ArgumentException("Invalid piece type");
+                }
+            }
+
 
         #endregion
     }

@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess.model\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|c:\\users\\dnguyen\\downloads\\sharpchess\\sharpchess.model\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,40 +11,36 @@
       "RelativeMoniker": "D:0:0:{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}|SharpChess Game\\SharpChess.csproj|solutionrelative:sharpchess game\\forms\\frmdifficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}|SharpChess Game\\SharpChess.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess game\\forms\\frmdifficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}|SharpChess Game\\SharpChess.csproj|solutionrelative:sharpchess game\\forms\\frmdifficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|c:\\users\\dnguyen\\downloads\\sharpchess\\sharpchess.model\\pieces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\pieces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess.model\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess.model\\fen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\fen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess.model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess.model\\winboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\winboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}|SharpChess Game\\SharpChess.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess game\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}|SharpChess Game\\SharpChess.csproj|solutionrelative:sharpchess game\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess.model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess.model\\ai\\brain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\ai\\brain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|c:\\users\\dnguyen\\downloads\\sharpchess\\sharpchess.model\\playerwhite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\playerwhite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}|SharpChess Game\\SharpChess.csproj|C:\\Users\\dnguyen\\Downloads\\SharpChess\\sharpchess game\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}|SharpChess Game\\SharpChess.csproj|solutionrelative:sharpchess game\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|c:\\users\\dnguyen\\downloads\\sharpchess\\sharpchess.model\\playerblack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\playerblack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|c:\\users\\dnguyen\\downloads\\sharpchess\\sharpchess.model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|c:\\users\\dnguyen\\downloads\\sharpchess\\sharpchess.model\\piecepawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\piecepawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|c:\\users\\dnguyen\\downloads\\sharpchess\\sharpchess.model\\pieces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE301A37-33A9-4B7A-BE08-D001057610CD}|SharpChess.Model\\SharpChess.Model.csproj|solutionrelative:sharpchess.model\\pieces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,8 +50,22 @@
       "DocumentGroups": [
         {
           "DockedHeight": 273,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 17,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmDifficulty.cs",
+              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmDifficulty.cs",
+              "RelativeDocumentMoniker": "SharpChess Game\\Forms\\frmDifficulty.cs",
+              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmDifficulty.cs",
+              "RelativeToolTip": "SharpChess Game\\Forms\\frmDifficulty.cs",
+              "ViewState": "AgIAAJMDAAAAAAAAAAAAAK0DAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T18:44:22.333Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -94,92 +104,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmMain.cs",
-              "RelativeDocumentMoniker": "SharpChess Game\\Forms\\frmMain.cs",
-              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmMain.cs [Design]",
-              "RelativeToolTip": "SharpChess Game\\Forms\\frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:36:10.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmMain.cs",
-              "RelativeDocumentMoniker": "SharpChess Game\\Forms\\frmMain.cs",
-              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmMain.cs",
-              "RelativeToolTip": "SharpChess Game\\Forms\\frmMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJICAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:36:37.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Game.cs",
-              "RelativeDocumentMoniker": "SharpChess.Model\\Game.cs",
-              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Game.cs*",
-              "RelativeToolTip": "SharpChess.Model\\Game.cs*",
-              "ViewState": "AgIAAK4EAAAAAAAAAAAkwM8EAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:38:09.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Board.cs",
               "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Board.cs",
               "RelativeDocumentMoniker": "SharpChess.Model\\Board.cs",
               "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Board.cs",
               "RelativeToolTip": "SharpChess.Model\\Board.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABgCAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAACoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:39:00.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmDifficulty.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmDifficulty.cs",
-              "RelativeDocumentMoniker": "SharpChess Game\\Forms\\frmDifficulty.cs",
-              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmDifficulty.cs [Design]",
-              "RelativeToolTip": "SharpChess Game\\Forms\\frmDifficulty.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:43:59.694Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmDifficulty.cs",
-              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmDifficulty.cs",
-              "RelativeDocumentMoniker": "SharpChess Game\\Forms\\frmDifficulty.cs",
-              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess Game\\Forms\\frmDifficulty.cs",
-              "RelativeToolTip": "SharpChess Game\\Forms\\frmDifficulty.cs",
-              "ViewState": "AgIAAPECAAAAAAAAAAArwA4DAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T18:44:22.333Z",
+              "WhenOpened": "2025-02-20T18:39:00.053Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Brain.cs",
-              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\AI\\Brain.cs",
-              "RelativeDocumentMoniker": "SharpChess.Model\\AI\\Brain.cs",
-              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\AI\\Brain.cs",
-              "RelativeToolTip": "SharpChess.Model\\AI\\Brain.cs",
-              "ViewState": "AgIAAF4BAAAAAAAAAAArwGUBAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T21:13:42.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "WinBoard.cs",
               "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\WinBoard.cs",
               "RelativeDocumentMoniker": "SharpChess.Model\\WinBoard.cs",
@@ -187,43 +125,98 @@
               "RelativeToolTip": "SharpChess.Model\\WinBoard.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T21:33:28.455Z"
+              "WhenOpened": "2025-02-20T21:33:28.455Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FEN.cs",
-              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\FEN.cs",
-              "RelativeDocumentMoniker": "SharpChess.Model\\FEN.cs",
-              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\FEN.cs",
-              "RelativeToolTip": "SharpChess.Model\\FEN.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T21:33:37.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Piece.cs",
               "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Piece.cs",
               "RelativeDocumentMoniker": "SharpChess.Model\\Piece.cs",
               "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Piece.cs",
               "RelativeToolTip": "SharpChess.Model\\Piece.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0CAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T21:33:48.482Z"
+              "WhenOpened": "2025-02-20T21:33:48.482Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Pieces.cs",
               "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Pieces.cs",
               "RelativeDocumentMoniker": "SharpChess.Model\\Pieces.cs",
               "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Pieces.cs",
               "RelativeToolTip": "SharpChess.Model\\Pieces.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAD8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T21:33:55.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PiecePawn.cs",
+              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\PiecePawn.cs",
+              "RelativeDocumentMoniker": "SharpChess.Model\\PiecePawn.cs",
+              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\PiecePawn.cs",
+              "RelativeToolTip": "SharpChess.Model\\PiecePawn.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T22:51:49.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerWhite.cs",
+              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\PlayerWhite.cs",
+              "RelativeDocumentMoniker": "SharpChess.Model\\PlayerWhite.cs",
+              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\PlayerWhite.cs",
+              "RelativeToolTip": "SharpChess.Model\\PlayerWhite.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAFkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T23:13:03.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerBlack.cs",
+              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\PlayerBlack.cs",
+              "RelativeDocumentMoniker": "SharpChess.Model\\PlayerBlack.cs",
+              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\PlayerBlack.cs",
+              "RelativeToolTip": "SharpChess.Model\\PlayerBlack.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwGkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T23:14:16.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Game.cs",
+              "RelativeDocumentMoniker": "SharpChess.Model\\Game.cs",
+              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Game.cs",
+              "RelativeToolTip": "SharpChess.Model\\Game.cs",
+              "ViewState": "AgIAACgEAAAAAAAAAAAqwDcEAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T23:25:05.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Player.cs",
+              "RelativeDocumentMoniker": "SharpChess.Model\\Player.cs",
+              "ToolTip": "C:\\Users\\dnguyen\\Downloads\\SharpChess\\SharpChess.Model\\Player.cs",
+              "RelativeToolTip": "SharpChess.Model\\Player.cs",
+              "ViewState": "AgIAAKEDAAAAAAAAAAAAAIMDAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T23:32:51.162Z",
               "EditorCaption": ""
             }
           ]
