@@ -31,6 +31,8 @@ namespace SharpChess.Model
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using static SharpChess.Model.Player;
+    using System.Text;
 
     #endregion
 
@@ -535,5 +537,53 @@ namespace SharpChess.Model
         }
 
         #endregion
+
+        public static string GetFenPosition()
+        {
+            StringBuilder fen = new StringBuilder();
+
+            for (int rank = 7; rank >= 0; rank--)
+            {
+                int emptyCount = 0;
+
+                for (int file = 0; file < 8; file++)
+                {
+                    Piece piece = GetPiece(file, rank);
+
+                    if (piece == null)
+                    {
+                        emptyCount++;
+                    }
+                    else
+                    {
+                        if (emptyCount > 0)
+                        {
+                            fen.Append(emptyCount);
+                            emptyCount = 0;
+                        }
+                        fen.Append(GetFenChar(piece));
+                    }
+                }
+
+                if (emptyCount > 0)
+                {
+                    fen.Append(emptyCount);
+                }
+
+                if (rank > 0)
+                {
+                    fen.Append('/');
+                }
+            }
+
+            return fen.ToString();
+        }
+
+        private static char GetFenChar(Piece piece)
+        {
+            char c = piece.GetType().ToString()[0]; // Assuming Identifier is like 'K', 'Q', 'R', etc.
+            return piece.Player.Colour == PlayerColourNames.White ? char.ToUpper(c) : char.ToLower(c);
+        }
+
     }
 }

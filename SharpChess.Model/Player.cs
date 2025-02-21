@@ -921,7 +921,7 @@ namespace SharpChess.Model
                 }
             }
 
-            private Piece.PieceIdentifierCodes GetPieceIdentifier(Piece.PieceNames piece, int file)
+            public Piece.PieceIdentifierCodes GetPieceIdentifier(Piece.PieceNames piece, int file)
             {
                 bool isWhite = this.Colour == PlayerColourNames.White;
 

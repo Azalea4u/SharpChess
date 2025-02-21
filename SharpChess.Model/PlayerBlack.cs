@@ -88,38 +88,64 @@ namespace SharpChess.Model
 
         public override void SetPiecesAtStartingPositions()
         {
-            this.Pieces.Add(this.King = new Piece(Piece.PieceNames.King, this, 4, 7, Piece.PieceIdentifierCodes.BlackKing));
-            this.Pieces.Add(new Piece(Piece.PieceNames.Queen, this, 3, 7, Piece.PieceIdentifierCodes.BlackQueen));
-            this.Pieces.Add(new Piece(Piece.PieceNames.Rook, this, 0, 7, Piece.PieceIdentifierCodes.BlackQueensRook));
-            this.Pieces.Add(new Piece(Piece.PieceNames.Rook, this, 7, 7, Piece.PieceIdentifierCodes.BlackKingsRook));
-            this.Pieces.Add(new Piece(Piece.PieceNames.Bishop, this, 2, 7, Piece.PieceIdentifierCodes.BlackQueensBishop));
-            this.Pieces.Add(new Piece(Piece.PieceNames.Bishop, this, 5, 7, Piece.PieceIdentifierCodes.BlackKingsBishop));
-            this.Pieces.Add(new Piece(Piece.PieceNames.Knight, this, 1, 7, Piece.PieceIdentifierCodes.BlackQueensKnight));
-            this.Pieces.Add(new Piece(Piece.PieceNames.Knight, this, 6, 7, Piece.PieceIdentifierCodes.BlackKingsKnight));
+            //this.Pieces.Add(this.King = new Piece(Piece.PieceNames.King, this, 4, 7, Piece.PieceIdentifierCodes.BlackKing));
+            //this.Pieces.Add(new Piece(Piece.PieceNames.Queen, this, 3, 7, Piece.PieceIdentifierCodes.BlackQueen));
+            //this.Pieces.Add(new Piece(Piece.PieceNames.Rook, this, 0, 7, Piece.PieceIdentifierCodes.BlackQueensRook));
+            //this.Pieces.Add(new Piece(Piece.PieceNames.Rook, this, 7, 7, Piece.PieceIdentifierCodes.BlackKingsRook));
+            //this.Pieces.Add(new Piece(Piece.PieceNames.Bishop, this, 2, 7, Piece.PieceIdentifierCodes.BlackQueensBishop));
+            //this.Pieces.Add(new Piece(Piece.PieceNames.Bishop, this, 5, 7, Piece.PieceIdentifierCodes.BlackKingsBishop));
+            //this.Pieces.Add(new Piece(Piece.PieceNames.Knight, this, 1, 7, Piece.PieceIdentifierCodes.BlackQueensKnight));
+            //this.Pieces.Add(new Piece(Piece.PieceNames.Knight, this, 6, 7, Piece.PieceIdentifierCodes.BlackKingsKnight));
+            //
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    this.Pieces.Add(new Piece(Piece.PieceNames.Pawn, this, i, 6, Piece.PieceIdentifierCodes.BlackPawn1 + i));
+            //}
 
-            for (int i = 0; i < 8; i++)
-            {
-                this.Pieces.Add(new Piece(Piece.PieceNames.Pawn, this, i, 6, Piece.PieceIdentifierCodes.BlackPawn1 + i));
-            }
+
+            SetStandardPositions();
         }
 
-        public void SetChess960Positions(int[] backRank)
+        public virtual void SetChess960Positions(int[] backRank)
         {
-            this.PieceTypes().Clear();
+            // Remove all existing pieces
+            while (this.Pieces.Count > 0)
+            {
+                this.Pieces.Remove(this.Pieces.Item(0));
+            }
 
-            // Place back-rank pieces
+            int pawnRank = 0;
+
+            // Place back-rank pieces (ensuring only 8 pieces)
             for (int i = 0; i < 8; i++)
             {
                 Piece.PieceNames pieceType = (Piece.PieceNames)backRank[i];
-                this.Pieces.Add(new Piece(pieceType, this, i, 7, GetBlackPieceIdentifier(pieceType, i)));
+                Piece.PieceIdentifierCodes identifier = GetPieceIdentifier(pieceType, i);
+
+                int rank = this.Colour == PlayerColourNames.White ? 0 : 7;
+                pawnRank = this.Colour == PlayerColourNames.White ? 1 : 6;
+
+                // Ensure that only 8 back-rank pieces are added
+                if (this.Pieces.Count < 16)
+                {
+                    this.Pieces.Add(new Piece(pieceType, this, i, rank, identifier));
+                }
             }
 
-            // Place pawns
+            // Place pawns (8 pawns for each player)
             for (int i = 0; i < 8; i++)
             {
-                this.Pieces.Add(new Piece(Piece.PieceNames.Pawn, this, i, 6, Piece.PieceIdentifierCodes.BlackPawn1 + i));
+                // Ensure only 8 pawns are added, 1 for each file
+                if (this.Pieces.Count < 16)
+                {
+                    this.Pieces.Add(new Piece(Piece.PieceNames.Pawn, this, i, pawnRank,
+                        this.Colour == PlayerColourNames.White ?
+                        Piece.PieceIdentifierCodes.WhitePawn1 + i :
+                        Piece.PieceIdentifierCodes.BlackPawn1 + i));
+                }
             }
         }
+
 
         private Piece.PieceIdentifierCodes GetBlackPieceIdentifier(Piece.PieceNames piece, int file)
         {

@@ -1052,7 +1052,6 @@ namespace SharpChess.Model
                 this.Player.IncreaseMaterialCount();
             }
         }
-
         #endregion
     }
 }

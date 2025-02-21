@@ -71,7 +71,7 @@ namespace SharpChess.Model
             ClockTime = new TimeSpan(0, 5, 0);
             ClockMaxMoves = 40;
             UseRandomOpeningMoves = true;
-            IsChess960 = true;
+            IsChess960 = false;
             MoveRedoList = new Moves();
             MaximumSearchDepth = 1;
             MoveAnalysis = new Moves();
